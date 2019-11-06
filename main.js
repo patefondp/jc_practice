@@ -1,6 +1,7 @@
 
 'use strict'
-
+var a = 10;
+var b = 15;
 
 function format (response){
 return response.json();
@@ -26,6 +27,8 @@ fetch('http://blog.api.axenov-it.com/posts')
 .then(format)
 .then(render1)
 .then(render2);
+
+
 
 
 // "use strict"
