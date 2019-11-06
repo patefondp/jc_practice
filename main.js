@@ -1,7 +1,5 @@
 
 'use strict'
-var a = 10;
-var b = 15;
 
 function format (response){
 return response.json();
@@ -11,24 +9,28 @@ function render1 (posts){
     var html = "";
     for (var post of posts){
         html += '<div class="post">';
-        html += "<p>" + post.title + "</p>";
+        html += "<p>" + post.title + "</p>"
         html += "</div>"
     }
     return html;
 };
 
 function render2 (str){
-    var container = document.getSelection('list-posts');
+    var container = document.querySelector('#list-posts');
     container.innerHTML = str; 
-    console.log (container);
+    console.dir (container);
 };
-
+function showPost() {
 fetch('http://blog.api.axenov-it.com/posts')
 .then(format)
 .then(render1)
 .then(render2);
+}
+var btn = document.querySelector('#render-post')
 
+console.dir(btn);
 
+btn.onclick = showPost;
 
 
 // "use strict"
