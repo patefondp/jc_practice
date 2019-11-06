@@ -1,0 +1,13 @@
+#list-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.post {
+    width: 24%;
+    min-height: 150px;
+    text-align: center;
+    box-shadow: 0 0 2px 3px black;
+    margin: 15px;
+}
